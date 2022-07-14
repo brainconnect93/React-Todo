@@ -1,39 +1,44 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+
+// eslint-disable-next-line react/prefer-stateless-function
 
 class InputTodo extends Component {
     state = {
-        title: ""
+      title: '',
     };
-    onChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
+
+    onChange = (e) => {
+      this.setState({
+        [e.target.name]: e.target.value,
+      });
     };
-    handleSubmit = e => {
-        e.preventDefault();
-        if (this.state.title.trim()) {
+
+    handleSubmit = (e) => {
+      e.preventDefault();
+      if (this.state.title.trim()) {
         this.props.addTodoProps(this.state.title);
         this.setState({
-            title: ""
-        })
+          title: '',
+        });
       } else {
-        alert("Please write item")
+        alert('Please write item');
       }
     };
+
     render() {
-        return (
-            <form onSubmit={this.handleSubmit} className="form-container" >
-               <input 
-               type="text"
-               className="input-text"
-               placeholder="Add Todo..."
-               value={this.state.title}
-               name="title"
-               onChange={this.onChange}
-               />
-               <button className="input-submit">Submit</button>
-            </form>
-        )
+      return (
+        <form onSubmit={this.handleSubmit} className="form-container">
+          <input
+            type="text"
+            className="input-text"
+            placeholder="Add Todo..."
+            value={this.state.title}
+            name="title"
+            onChange={this.onChange}
+          />
+          <button className="input-submit">Submit</button>
+        </form>
+      );
     }
 }
 

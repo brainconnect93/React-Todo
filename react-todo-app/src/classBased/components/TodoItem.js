@@ -1,7 +1,7 @@
 import React from 'react';
 import styling from './TodoItem.module.css';
 
-// eslint-disable-next-line react/prefer-stateless-function
+/* eslint disable */
 class TodoItem extends React.Component {
     state = {
       editing: false,

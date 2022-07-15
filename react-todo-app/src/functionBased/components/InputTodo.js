@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
+/* eslint disable */
 const InputTodo = (props) => {
   const [inputText, setInputText] = useState({
     title: '',
@@ -22,7 +22,7 @@ const InputTodo = (props) => {
       });
     } else {
       alert('Please write item');
-    };
+    }
   };
   return (
     <form onSubmit={handleSubmit} className="form-container">

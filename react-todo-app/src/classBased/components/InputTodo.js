@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
+/* eslint disable */
 class InputTodo extends Component {
     state = {
       title: '',

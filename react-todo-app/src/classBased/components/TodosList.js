@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-// eslint-disable-next-line react/prefer-stateless-function
+/* eslint disable */
 class TodosList extends React.Component {
   render() {
     return (

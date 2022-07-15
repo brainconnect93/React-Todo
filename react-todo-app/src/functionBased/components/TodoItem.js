@@ -1,42 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import styling from './TodoItem.module.css';
-// eslint-disable-next-line react/prefer-stateless-function
-const TodoItem = props => {
-  const [editing, setEditing] = useState(false)
+
+/* eslint disable */
+const TodoItem = (props) => {
+  const [editing, setEditing] = useState(false);
 
   const handleEditing = () => {
-    setEditing(true)
-  }
+    setEditing(true);
+  };
 
-  const handleUpdatedDone = event => {
-    if (event.key === "Enter") {
-      setEditing(false)
+  const handleUpdatedDone = (event) => {
+    if (event.key === 'Enter') {
+      setEditing(false);
     }
-  }
+  };
 
   const completedStyle = {
-    fontStyle: "italic",
-    color: "#595959",
+    fontStyle: 'italic',
+    color: '#595959',
     opacity: 0.4,
-    textDecoration: "line-through",
-  }
+    textDecoration: 'line-through',
+  };
 
-  const { completed, id, title } = props.todo
+  const { completed, id, title } = props.todo;
 
-  let viewMode = {}
-  let editMode = {}
+  const viewMode = {};
+  const editMode = {};
 
   if (editing) {
-    viewMode.display = "none"
+    viewMode.display = 'none';
   } else {
-    editMode.display = "none"
+    editMode.display = 'none';
   }
 
-  useEffect(() => {
-    return () => {
-      console.log("Cleaning up...")
-    }
-  }, [])
+  useEffect(() => () => {
+    console.log('Cleaning up...');
+  }, []);
 
   return (
     <li className={styling.item}>
@@ -55,14 +54,14 @@ const TodoItem = props => {
         style={editMode}
         className={styling.textInput}
         value={title}
-        onChange={e => {
-          props.setUpdate(e.target.value, id)
+        onChange={(e) => {
+          props.setUpdate(e.target.value, id);
         }}
         onKeyDown={handleUpdatedDone}
       />
     </li>
-  )
-}
+  );
+};
 
 // class TodoItem extends React.Component {
 //     state = {

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line react/prefer-stateless-function
 const Header = () => {
   const headerStyle = {
     padding: '20px 0',

@@ -5,7 +5,6 @@ import Header from './Header';
 import InputTodo from './InputTodo';
 
 // eslint-disable-next-line react/prefer-stateless-function
-
 class TodoContainer extends React.Component {
     state = {
       todos: [],

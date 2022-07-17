@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 
 
 Prerequisites: 
-   - Signup/login to your github account and go to https://github.com/udeaghad/todo-list-react/.
+   - Signup/login to your github account and go to https://github.com/brainconnect93/react-todo/.
 
 Setup
    - Clone the repository on github to your local terminal

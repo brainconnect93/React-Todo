@@ -1,3 +1,3 @@
 # React-Todo
 
-## complete documentation is inside the reac todo folder
+## complete documentation is inside the react todo folder
